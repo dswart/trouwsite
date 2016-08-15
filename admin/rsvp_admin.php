@@ -17,7 +17,7 @@
        <input type="text" class="form-control" id="familyName" name="familyName" placeholder="Naam van de familie">
      </fieldset>
      <fieldset class="form-group">
-       <label for="invideCode">Invite-code (wordt automatisch aangemaakt)</label>
+       <label for="inviteCode">Invite-code (wordt automatisch aangemaakt)</label>
        <script>
        $(document).ready(function(){
           var inviteCode = Math.floor((Math.random() * 89999) + 10000);
@@ -25,7 +25,7 @@
           $("#inviteCode").replaceWith('<input type="text" class="form-control" name="inviteCode" id="inviteCode" value="'+inviteCode+'" disabled>');
        });
        </script>
-       <input type="text" id="inviteCode">
+       <input type="text" class="form-control" name="inviteCode" id="inviteCode" value="" disabled>
      </fieldset>
      <button type="submit" class="btn btn-primary">Submit</button>
    </form>
