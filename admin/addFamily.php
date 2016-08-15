@@ -4,8 +4,8 @@ $familyName = mysqli_real_escape_string($link, $_POST['familyName']);
 $inviteCode = mysqli_real_escape_string($link, $_POST['inviteCode']);
 echo $familyName;
 echo "<br>";
-echo "<br>";
-echo $inviteCode;
+// echo $inviteCode;
+echo $_POST['inviteCode'];
 // $sql = "
 //    INSERT INTO family
 //    (
