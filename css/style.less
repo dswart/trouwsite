@@ -1,0 +1,38 @@
+@import "reset.less";
+@import "mixins.less";
+@import "typo.less";
+@import "button.less";
+@import "input.less";
+@import "header.less";
+@import "home.less";
+@import "pictures.less";
+@import "route.less";
+@import "rsvp.less";
+
+@zIndex-scale-1: 100;
+@zIndex-scale-2: 200;
+@zIndex-scale-3: 300;
+@zIndex-scale-4: 400;
+@zIndex-scale-5: 500;
+@zIndex-scale-6: 600;
+@zIndex-scale-7: 700;
+@zIndex-scale-8: 800;
+@zIndex-scale-9: 900;
+
+body{
+   .flex();
+   display: flex;
+   flex-flow: row wrap;
+   justify-content: space-between;
+   margin: 0;
+   padding: 0;
+}
+main{
+   margin-left: @header-width;
+   width: calc(100% - @header-width);
+   position: relative;
+   font-family: @sans-serif;
+}
+.active{
+   .flex();
+}

@@ -1,0 +1,28 @@
+#pictures{
+   display: none;
+}
+.pictures{
+   .flex();
+   position: absolute;
+   flex-flow: row wrap;
+   width: 100%;
+   justify-content: space-between;
+}
+.picture-grid{
+   .flex();
+   flex-flow: row wrap;
+   padding: 0.5rem;
+   .picture{
+      justify-content: space-between;
+      flex: 1 0 25%;
+      padding: 0.5rem 0.5rem;
+      min-width:5rem;
+      img{
+         width: 100%;
+         height: auto;
+      }
+   }
+   .picture:nth-last-child(2):nth-child(4n) {
+      min-width: 33%;
+   }
+}

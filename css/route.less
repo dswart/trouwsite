@@ -1,0 +1,68 @@
+@input-border-color: @button-background-color;
+#route{
+   display: none;
+}
+.route{
+   width: 100%;
+   position: absolute;
+   .flex();
+   justify-content: space-between;
+   flex-flow: column nowrap;
+}
+.selector{
+   width: 100%;
+   flex-flow: row wrap;
+   justify-content: center;
+   align-items: center;
+   padding: 2rem 0;
+}
+.selector-h1{
+   text-align: center;
+   padding: 0 0 2rem;
+}
+form{
+   .flex();
+   flex-direction: row wrap;
+   justify-content: center;
+   width: 100%;
+}
+ form .form-wrapper{
+   .flex();
+   flex-flow: column nowrap;
+   width: 25rem;
+}
+ form label{
+   .flex();
+}
+ form input[type="text"]{
+   .flex();
+   padding: 1rem;
+   background-color: #fff;
+   outline: none;
+   border: 2px solid @input-border-color;
+   font-size: @font-size-large;
+   font-family: @sans-serif;
+   font-weight: @font-weight-light;
+}
+.map{
+   width: 100%;
+   .flex();
+   justify-content: space-between;
+   flex-flow: column nowrap;
+   padding: 0;
+}
+#right-panel{
+   height: 500px;
+   width: 0%;
+   .flex();
+   overflow: auto;
+   position: relative;
+}
+#map{
+  height: 500px;
+  width: 100%;
+  position: relative;
+}
+.adp-legal{
+   display: none;
+}

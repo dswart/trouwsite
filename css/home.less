@@ -1,0 +1,21 @@
+@home-column-height: 20rem;
+
+.home{
+   width: 100%;
+   position: absolute;
+   justify-content: space-between;
+   .flex();
+   flex-flow: row nowrap;
+}
+.img-rings{
+   width: 100%;
+   height: auto;
+}
+.column{
+   flex-grow: 1;
+   height: @home-column-height;
+   .flex();
+   flex-flow: column nowrap;
+   justify-content: center;
+   text-align: center;
+}
