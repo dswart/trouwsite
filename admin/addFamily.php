@@ -1,11 +1,10 @@
 <?php
 require_once "config.php";
 $familyName = mysqli_real_escape_string($link, $_POST['familyName']);
-$inviteCode = mysqli_real_escape_string($link, $_POST['inviteCode']);
+$inviteCode = rand(10000, 99999);
 echo $familyName;
 echo "<br>";
-// echo $inviteCode;
-echo $_POST['inviteCode'];
+echo $inviteCode;
 // $sql = "
 //    INSERT INTO family
 //    (
