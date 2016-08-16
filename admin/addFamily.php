@@ -18,12 +18,12 @@ $sql = "
    )
 ";
 
-if(!$res = mysql_query($sql))
+if(!mysqli_query($link, $sql)
 {
-    trigger_error(mysql_error().'<br />In query: '.$sql);
+   die('Error inserting SQL: ' . mysqli_error($link));
 }
 else
 {
-    $id = mysql_insert_id();
+   echo 'Great success!';
 }
 ?>
