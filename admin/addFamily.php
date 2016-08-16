@@ -5,6 +5,7 @@ $inviteCode = rand(10000, 99999);
 echo $familyName;
 echo "<br>";
 echo $inviteCode;
+
 $sql = "
    INSERT INTO family
    (
@@ -17,7 +18,7 @@ $sql = "
       '".$inviteCode."'
    )
 ";
-
+mysqli_select_db($db_name);
 if(!mysqli_query($link, $sql))
 {
    die('Error inserting SQL: ' . mysqli_error($link));
