@@ -18,7 +18,7 @@ $sql = "
    )
 ";
 
-if(!mysqli_query($link, $sql)
+if(!mysqli_query($link, $sql))
 {
    die('Error inserting SQL: ' . mysqli_error($link));
 }
