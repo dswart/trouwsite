@@ -18,13 +18,13 @@ $sql = "
       '".$inviteCode."'
    )
 ";
-mysqli_select_db($db_name);
-if(!mysqli_query($link, $sql))
-{
+if(!mysqli_select_db($link, $db_name)){
+   die('Error selecting databse: ' . mysqli_error($link));
+}
+if(!mysqli_query($link, $sql)){
    die('Error inserting SQL: ' . mysqli_error($link));
 }
-else
-{
+else{
    echo 'Great success!';
 }
 ?>
