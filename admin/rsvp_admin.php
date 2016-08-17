@@ -11,7 +11,7 @@
    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
 </head>
 <body>
-   <div class="button-wrapper" style="width: 50%; margin: 2rem 25% 2rem 25%;">
+   <div class="btn-group" style="width: 50%; margin: 2rem 25% 2rem 25%;">
       <button type="button" name="button" class="addFamilyButton btn btn-primary">Familie toevoegen</button>
       <button type="button" name="button" class="addPersonButton btn btn-outline-primary">Persoon toevoegen</button>
    </div>
