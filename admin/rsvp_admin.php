@@ -11,9 +11,11 @@
    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
 </head>
 <body>
-   <button type="button" name="button" class="addFamilyButton">Familie toevoegen</button>
-   <button type="button" name="button" class="addPersonButton" style="display: none;">Persoon toevoegen</button>
-   <form class="addFamily" action="addFamily.php" method="POST" style="width: 50%; margin-left: 25%; margin: 2rem 25% 2rem 25%;">
+   <div class="button-wrapper" style="width: 50%; margin: 2rem 25% 2rem 25%;">
+      <button type="button" name="button" class="addFamilyButton btn btn-primary">Familie toevoegen</button>
+      <button type="button" name="button" class="addPersonButton btn btn-primary">Persoon toevoegen</button>
+   </div>
+   <form class="addFamily" action="addFamily.php" method="POST" style="width: 50%; margin: 2rem 25% 2rem 25%;">
      <fieldset class="form-group">
        <label for="familyName">Naam van de familie</label>
        <input type="text" class="form-control" id="familyName" name="familyName" placeholder="Naam van de familie">
