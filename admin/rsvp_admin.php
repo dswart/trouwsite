@@ -43,7 +43,7 @@
    </div>
    <script type="text/javascript">
       $(document).ready(function(){
-         $(".addButtonFamily").click(function(){
+         $(".addButtonPerson").click(function(){
             $(".addFamily").hide();
             $(".addPerson").show();
          });
