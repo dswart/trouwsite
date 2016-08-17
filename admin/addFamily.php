@@ -2,9 +2,10 @@
 require_once "config.php";
 $familyName = mysqli_real_escape_string($link, $_POST['familyName']);
 $inviteCode = rand(10000, 99999);
-echo $familyName;
+echo "The family name you entered: " . $familyName;
 echo "<br>";
-echo $inviteCode;
+echo "The invite code generated: " . $inviteCode;
+echo "<br>";
 
 $sql = "
    INSERT INTO family
