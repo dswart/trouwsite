@@ -50,7 +50,7 @@
                $(".addFamily").hide();
                $(".addPerson").show();
             }
-            elseif($(this).hasClass("btn-primary")){
+            else if($(this).hasClass("btn-primary")){
                $(this).removeClass("btn-primary");
                $(this).addClass("btn-outline-primary");
                $(".addPerson").hide();
