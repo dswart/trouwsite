@@ -45,13 +45,13 @@
       $(document).ready(function(){
          $(".addFamilyButton").click(function(){
             $(this).addClass("btn-primary");
-            $(".addPersonButton").addClass("btn-outline-primary").removeClass("btn-primary");
+            $(".addPersonButton").addClass("btn-primary").removeClass("btn-outline-primary");
             $(".addFamily").show();
             $(".addPerson").hide();
          });
          $(".addPersonButton").click(function(){
             $(this).addClass("btn-primary");
-            $(".addFamilyButton").addClass("btn-primary").removeClass("btn-outline-primary");
+            $(".addFamilyButton").addClass("btn-outline-primary").removeClass("btn-primary");
             $(".addPerson").show();
             $(".addFamily").hide();
          });
