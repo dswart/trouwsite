@@ -49,13 +49,13 @@
                $(this).addClass("btn-primary");
                $(".addFamily").hide();
                $(".addPerson").show();
-            })
+            }
             elseif($(this).hasClass("btn-primary")){
                $(this).removeClass("btn-primary");
                $(this).addClass("btn-outline-primary");
                $(".addPerson").hide();
                $(".addFamily").show();
-            })
+            }
          });
          // $(".addFamilyButton").click(function(){
          //    $(".addPersonButton").removeClass("btn-outline-primary btn-primary");
