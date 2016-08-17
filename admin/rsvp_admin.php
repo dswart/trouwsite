@@ -44,12 +44,12 @@
    <script type="text/javascript">
       $(document).ready(function(){
          $(".addButtonFamily").click(function(){
-            $(".addPerson").hide();
-            $(".addFamily").show();
-         });
-         $(".addButtonFamily").click(function(){
             $(".addFamily").hide();
             $(".addPerson").show();
+         });
+         $(".addButtonFamily").click(function(){
+            $(".addPerson").hide();
+            $(".addFamily").show();
          });
       });
    </script>
