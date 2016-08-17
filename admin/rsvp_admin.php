@@ -16,7 +16,7 @@
          <button type="button" name="button" class="addFamilyButton btn btn-primary">Familie toevoegen</button>
          <button type="button" name="button" class="addPersonButton btn btn-outline-primary">Persoon toevoegen</button>
       </div>
-      <form class="addFamily" action="addFamily.php" method="POST" style="width: 50%; margin: 2rem 25% 2rem 25%;">
+      <form class="addFamily" action="addFamily.php" method="POST" style="margin: 2rem 0">
         <fieldset class="form-group">
           <label for="familyName">Naam van de familie</label>
           <input type="text" class="form-control" id="familyName" name="familyName" placeholder="Naam van de familie">
@@ -24,7 +24,7 @@
         <button type="submit" class="btn btn-primary">Voeg toe!</button>
       </form>
 
-      <form class="addPerson" action="addPerson.php" method="POST" style="width: 50%; margin-left: 25%; margin: 2rem 25% 2rem 25%; display: none;">
+      <form class="addPerson" action="addPerson.php" method="POST" style="margin: 2rem 0; display: none;">
         <fieldset class="form-group">
           <label for="familyName">Naam</label>
           <input type="text" class="form-control" id="personName" name="personName" placeholder="Naam">
@@ -45,13 +45,13 @@
       $(document).ready(function(){
          $(".addFamilyButton").click(function(){
             $(this).addClass("btn-primary");
-            $(".addPersonButton").toggleClass("btn-outline-primary");
+            $(".addPersonButton").addClass("btn-outline-primary").removeClass("btn-primary");
             $(".addFamily").show();
             $(".addPerson").hide();
          });
          $(".addPersonButton").click(function(){
             $(this).addClass("btn-primary");
-            $(".addFamilyButton").toggleClass("btn-primary");
+            $(".addFamilyButton").addClass("btn-primary").removeClass("btn-outline-primary");
             $(".addPerson").show();
             $(".addFamily").hide();
          });
