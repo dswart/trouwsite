@@ -16,7 +16,24 @@
        <label for="familyName">Naam van de familie</label>
        <input type="text" class="form-control" id="familyName" name="familyName" placeholder="Naam van de familie">
      </fieldset>
-     <button type="submit" class="btn btn-primary">Submit</button>
+     <button type="submit" class="btn btn-primary">Voeg toe!</button>
+   </form>
+
+   <form class="addPerson" action="addPerson.php" method="POST" style="width: 50%; margin-left: 25%; margin: 2rem 25% 2rem 25%;">
+     <fieldset class="form-group">
+       <label for="familyName">Naam</label>
+       <input type="text" class="form-control" id="personName" name="personName" placeholder="Naam">
+     </fieldset>
+     <fieldset>
+        <label for="family">Hoort bij deze familie</label>
+        <select class="form-control" id="family" name="family">
+           <option value="Dave Swart">Dave Swart</option>
+           <option value="Cor Swart">Cor Swart</option>
+           <option value="Michael Swart">Michael Swart</option>
+           <option value="Sandy Swart">Sandy Swart</option>
+           <option value="Jan Tolsma">Jan Tolsma</option>
+     </fieldset>
+     <button type="submit" class="btn btn-primary">Voeg toe!</button>
    </form>
 </body>
 </html>
