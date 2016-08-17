@@ -11,45 +11,47 @@
    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
 </head>
 <body>
-   <div class="btn-group" style="width: 50%; margin: 2rem 25% 2rem 25%;">
-      <button type="button" name="button" class="addFamilyButton btn btn-primary">Familie toevoegen</button>
-      <button type="button" name="button" class="addPersonButton btn btn-outline-primary">Persoon toevoegen</button>
-   </div>
-   <form class="addFamily" action="addFamily.php" method="POST" style="width: 50%; margin: 2rem 25% 2rem 25%;">
-     <fieldset class="form-group">
-       <label for="familyName">Naam van de familie</label>
-       <input type="text" class="form-control" id="familyName" name="familyName" placeholder="Naam van de familie">
-     </fieldset>
-     <button type="submit" class="btn btn-primary">Voeg toe!</button>
-   </form>
+   <div class="wrapper" style="width: 50%; margin-left: 25%;">
+      <div class="btn-group" style="margin: 2rem 0">
+         <button type="button" name="button" class="addFamilyButton btn btn-primary">Familie toevoegen</button>
+         <button type="button" name="button" class="addPersonButton btn btn-outline-primary">Persoon toevoegen</button>
+      </div>
+      <form class="addFamily" action="addFamily.php" method="POST" style="width: 50%; margin: 2rem 25% 2rem 25%;">
+        <fieldset class="form-group">
+          <label for="familyName">Naam van de familie</label>
+          <input type="text" class="form-control" id="familyName" name="familyName" placeholder="Naam van de familie">
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Voeg toe!</button>
+      </form>
 
-   <form class="addPerson" action="addPerson.php" method="POST" style="width: 50%; margin-left: 25%; margin: 2rem 25% 2rem 25%; display: none;">
-     <fieldset class="form-group">
-       <label for="familyName">Naam</label>
-       <input type="text" class="form-control" id="personName" name="personName" placeholder="Naam">
-     </fieldset>
-     <fieldset>
-        <label for="family">Hoort bij deze familie</label>
-        <select class="form-control" id="family" name="family">
-           <option value="Dave Swart">Dave Swart</option>
-           <option value="Cor Swart">Cor Swart</option>
-           <option value="Michael Swart">Michael Swart</option>
-           <option value="Sandy Swart">Sandy Swart</option>
-           <option value="Jan Tolsma">Jan Tolsma</option>
-     </fieldset>
-     <button type="submit" class="btn btn-primary">Voeg toe!</button>
-   </form>
+      <form class="addPerson" action="addPerson.php" method="POST" style="width: 50%; margin-left: 25%; margin: 2rem 25% 2rem 25%; display: none;">
+        <fieldset class="form-group">
+          <label for="familyName">Naam</label>
+          <input type="text" class="form-control" id="personName" name="personName" placeholder="Naam">
+        </fieldset>
+        <fieldset>
+           <label for="family">Hoort bij deze familie</label>
+           <select class="form-control" id="family" name="family">
+              <option value="Dave Swart">Dave Swart</option>
+              <option value="Cor Swart">Cor Swart</option>
+              <option value="Michael Swart">Michael Swart</option>
+              <option value="Sandy Swart">Sandy Swart</option>
+              <option value="Jan Tolsma">Jan Tolsma</option>
+        </fieldset>
+        <button type="submit" class="btn btn-primary">Voeg toe!</button>
+      </form>
+   </div>
    <script type="text/javascript">
       $(document).ready(function(){
          $(".addFamilyButton").click(function(){
             $(this).addClass("btn-primary");
-            $(".addPersonButton").addClass("btn-outline-primary");
+            $(".addPersonButton").toggleClass("btn-outline-primary");
             $(".addFamily").show();
             $(".addPerson").hide();
          });
          $(".addPersonButton").click(function(){
-            $(this).addClass("btn-primary")
-            $(".addFamilyButton").addClass("btn-outline-primary");
+            $(this).addClass("btn-primary");
+            $(".addFamilyButton").toggleClass("btn-primary");
             $(".addPerson").show();
             $(".addFamily").hide();
          });
