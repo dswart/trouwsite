@@ -44,12 +44,14 @@
          $(".addFamilyButton").click(function(){
             $(this).removeClass("btn-outline-primary");
             $(this).addClass("btn-primary")
+            $(".addPersonButton").addClass("btn-outline-primary");
             $(".addFamily").show();
             $(".addPerson").hide();
          });
          $(".addPersonButton").click(function(){
             $(this).removeClass("btn-outline-primary");
             $(this).addClass("btn-primary")
+            $(".addFamilyButton").addClass("btn-outline-primary");
             $(".addPerson").show();
             $(".addFamily").hide();
          });
