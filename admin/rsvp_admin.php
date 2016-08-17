@@ -40,7 +40,7 @@
      <button type="submit" class="btn btn-primary">Voeg toe!</button>
    </form>
    <script type="text/javascript">
-      $document.ready(function(){
+      $(document).ready(function(){
          $(".addFamilyButton").click(function(){
             $(".addFamily").show();
             $(".addPerson").hide();
