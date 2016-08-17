@@ -23,7 +23,7 @@
      <button type="submit" class="btn btn-primary">Voeg toe!</button>
    </form>
 
-   <form class="addPerson" action="addPerson.php" method="POST" style="width: 50%; margin-left: 25%; margin: 2rem 25% 2rem 25%;">
+   <form class="addPerson" action="addPerson.php" method="POST" style="width: 50%; margin-left: 25%; margin: 2rem 25% 2rem 25%; display: none;">
      <fieldset class="form-group">
        <label for="familyName">Naam</label>
        <input type="text" class="form-control" id="personName" name="personName" placeholder="Naam">
