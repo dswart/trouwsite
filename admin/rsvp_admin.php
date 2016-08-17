@@ -44,13 +44,13 @@
    <script type="text/javascript">
       $(document).ready(function(){
          $(".addButton").click(function(){
-            if($(this).hasClass("btn-outline-primary"){
+            if($(this).hasClass("btn-outline-primary")){
                $(this).removeClass("btn-outline-primary");
                $(this).addClass("btn-primary");
                $(".addFamily").hide();
                $(".addPerson").show();
             })
-            elseif($(this).hasClass("btn-primary"){
+            elseif($(this).hasClass("btn-primary")){
                $(this).removeClass("btn-primary");
                $(this).addClass("btn-outline-primary");
                $(".addPerson").hide();
