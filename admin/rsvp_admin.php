@@ -13,8 +13,8 @@
 <body>
    <div class="wrapper" style="width: 50%; margin-left: 25%;">
       <div class="btn-group" style="margin: 2rem 0">
-         <button type="button" name="button" class="addFamilyButton btn btn-primary">Familie toevoegen</button>
-         <button type="button" name="button" class="addPersonButton btn btn-outline-primary">Persoon toevoegen</button>
+         <button type="button" name="button" class="addButton btn btn-primary">Familie toevoegen</button>
+         <button type="button" name="button" class="addButton btn btn-outline-primary">Persoon toevoegen</button>
       </div>
       <form class="addFamily" action="addFamily.php" method="POST" style="margin: 2rem 0">
         <fieldset class="form-group">
@@ -43,20 +43,34 @@
    </div>
    <script type="text/javascript">
       $(document).ready(function(){
-         $(".addFamilyButton").click(function(){
-            $(".addPersonButton").removeClass("btn-outline-primary btn-primary");
-            $(this).addClass("btn-primary");
-            $(".addPersonButton").addClass("btn-outline-primary");
-            $(".addFamily").show();
-            $(".addPerson").hide();
+         $(".addButton").click(function(){
+            if($(this).hasClass("btn-outline-primary"){
+               $(this).removeClass("btn-outline-primary");
+               $(this).addClass("btn-primary");
+               $(".addFamily").hide();
+               $(".addPerson").show();
+            })
+            elseif($(this).hasClass("btn-primary"){
+               $(this).removeClass("btn-primary");
+               $(this).addClass("btn-outline-primary");
+               $(".addPerson").hide();
+               $(".addFamily").show();
+            })
          });
-         $(".addPersonButton").click(function(){
-            $(".addFamilyButton").removeClass("btn-outline-primary btn-primary");
-            $(this).addClass("btn-primary");
-            $(".addFamilyButton").addClass("btn-outline-primary");
-            $(".addPerson").show();
-            $(".addFamily").hide();
-         });
+         // $(".addFamilyButton").click(function(){
+         //    $(".addPersonButton").removeClass("btn-outline-primary btn-primary");
+         //    $(this).addClass("btn-primary");
+         //    $(".addPersonButton").addClass("btn-outline-primary");
+         //    $(".addFamily").show();
+         //    $(".addPerson").hide();
+         // });
+         // $(".addPersonButton").click(function(){
+         //    $(".addFamilyButton").removeClass("btn-outline-primary btn-primary");
+         //    $(this).addClass("btn-primary");
+         //    $(".addFamilyButton").addClass("btn-outline-primary");
+         //    $(".addPerson").show();
+         //    $(".addFamily").hide();
+         // });
       });
    </script>
 </body>
