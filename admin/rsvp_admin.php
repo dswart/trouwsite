@@ -43,11 +43,11 @@
    </div>
    <script type="text/javascript">
       $(document).ready(function(){
-         $(".addFamilyButton").click(function(){
+         $(".addButtonFamily").click(function(){
             $(".addPerson").hide();
             $(".addFamily").show();
          });
-         $(".addPersonButton").click(function(){
+         $(".addButtonFamily").click(function(){
             $(".addFamily").hide();
             $(".addPerson").show();
          });
