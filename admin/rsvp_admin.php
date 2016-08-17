@@ -46,14 +46,14 @@
          $(".addFamilyButton").click(function(){
             $(".addPersonButton").removeClass("btn-outline-primary btn-primary");
             $(this).addClass("btn-primary");
-            $("addPersonButton").addClass("btn-outline-primary");
+            $(".addPersonButton").addClass("btn-outline-primary");
             $(".addFamily").show();
             $(".addPerson").hide();
          });
          $(".addPersonButton").click(function(){
             $(".addFamilyButton").removeClass("btn-outline-primary btn-primary");
             $(this).addClass("btn-primary");
-            $("addFamilyButton").addClass("btn-outline-primary");
+            $(".addFamilyButton").addClass("btn-outline-primary");
             $(".addPerson").show();
             $(".addFamily").hide();
          });
