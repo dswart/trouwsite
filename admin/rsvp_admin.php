@@ -13,8 +13,8 @@
 <body>
    <div class="wrapper" style="width: 50%; margin-left: 25%;">
       <div class="btn-group" style="margin: 2rem 0">
-         <button type="button" name="button" class="addButtonFamily btn btn-primary">Familie toevoegen</button>
-         <button type="button" name="button" class="addButtonPerson btn btn-primary">Persoon toevoegen</button>
+         <button type="button" name="button" class="addButtonFamily btn btn-outline-primary">Familie toevoegen</button>
+         <button type="button" name="button" class="addButtonPerson btn btn-outline-primary">Persoon toevoegen</button>
       </div>
       <form class="addFamily" action="addFamily.php" method="POST" style="margin: 2rem 0">
         <fieldset class="form-group">
