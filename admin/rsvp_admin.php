@@ -39,7 +39,7 @@
                   die('Error selecting familyName from family: ' . mysqli_error($link));
                }
                echo "<pre>";
-               var_dump();
+               echo var_dump();
                die();
             ?>
            <select class="form-control" id="family" name="family">
