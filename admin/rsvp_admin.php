@@ -11,7 +11,6 @@
    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
 </head>
 <body>
-   <?php require_once "config.php"; ?>
    <div class="wrapper" style="width: 50%; margin-left: 25%;">
       <div class="btn-group" style="margin: 2rem 0">
          <button type="button" name="button" class="addButtonFamily btn btn-outline-primary">Familie toevoegen</button>
@@ -33,6 +32,7 @@
          <fieldset>
             <label for="family">Hoort bij deze familie</label>
             <?php
+               require_once "config.php";
                $query = "SELECT familyName FROM family";
                $result = mysqli_query($link, $query);
                if(!$result){
