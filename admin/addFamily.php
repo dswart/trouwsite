@@ -1,3 +1,10 @@
+<html>
+<head>
+    <title>Redirecting...</title>
+    <meta http-equiv="refresh" content="10;URL=http://www.daveenmies.nl/admin/rsvp_admin.php">
+</head>
+<body>
+
 <?php
 require_once "config.php";
 $familyName = mysqli_real_escape_string($link, $_POST['familyName']);
@@ -28,4 +35,9 @@ if(!mysqli_query($link, $sql)){
 else{
    echo 'Great success!';
 }
+
+$url='the/url/you/want/to/go';
+echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 ?>
+</body>
+</html>
