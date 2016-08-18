@@ -34,7 +34,12 @@
             <?php
                require_once "config.php";
                $query = "SELECT familyName FROM family";
-               $result = mysqli_query($link, $query);
+               if(!mysqli_select_db($link, $db_name)){
+                  die('Error selecting databse: ' . mysqli_error($link));
+               }
+               if(!mysqli_query($link, $query)){
+                  die('Error inserting SQL: ' . mysqli_error($link));
+               }
                if(!$result){
                   die('Error selecting familyName from family: ' . mysqli_error($link));
                }
