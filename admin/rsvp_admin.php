@@ -22,7 +22,7 @@
          die('Error selecting familyName from family: ' . mysqli_error($link));
       }
       echo "<pre>";
-      echo var_dump();
+      var_dump();
       die();
    ?>
    <!-- <div class="wrapper" style="width: 50%; margin-left: 25%;">
