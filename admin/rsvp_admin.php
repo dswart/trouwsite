@@ -21,8 +21,13 @@
       if(!$result){
          die('Error selecting familyName from family: ' . mysqli_error($link));
       }
-      echo $result;
-      die();
+      while ($row = mysqli_fetch_array($result))
+      {
+        $familyMembers[] = $row['familyName'];
+      }
+      foreach($familyName as $familyMembers){
+         echo $familyMembers;
+      }
    ?>
    <!-- <div class="wrapper" style="width: 50%; margin-left: 25%;">
       <div class="btn-group" style="margin: 2rem 0">
