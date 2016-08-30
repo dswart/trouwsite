@@ -11,7 +11,7 @@
    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
 </head>
 <body>
-   <div class="wrapper" style="width: 50%; margin-left: 25%;">
+   <!-- <div class="wrapper" style="width: 50%; margin-left: 25%;">
       <div class="btn-group" style="margin: 2rem 0">
          <button type="button" name="button" class="addButtonFamily btn btn-outline-primary">Familie toevoegen</button>
          <button type="button" name="button" class="addButtonPerson btn btn-outline-primary">Persoon toevoegen</button>
@@ -67,6 +67,6 @@
         </fieldset>
         <button type="submit" class="btn btn-primary">Voeg toe!</button>
       </form>
-   </div>
+   </div> -->
 </body>
 </html>
