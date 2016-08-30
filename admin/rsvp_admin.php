@@ -25,8 +25,8 @@
       {
         $familyMembers[] = $row['familyName'];
       }
-      foreach($familyName as $familyMembers){
-         echo $familyMembers;
+      foreach($familyMembers as $familyName){
+         echo $familyName;
          //This is just for you, git.
       }
    ?>
