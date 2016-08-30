@@ -45,16 +45,14 @@
             <label for="family">Hoort bij deze familie</label>
             <?php
                require_once "config.php";
-               $query = "SELECT * FROM family";
+               $query = "SELECT familyName FROM family";
                if(!mysqli_select_db($link, $db_name)){
                   die('Error selecting database: ' . mysqli_error($link));
                }
-               if(!mysqli_query($link, $query)){
-                  die('Error inserting SQL: ' . mysqli_error($link));
+               $result = mysqli_query($link, $query);
+               if(!$result){
+                  die('Error selecting familyName from family: ' . mysqli_error($link));
                }
-               // if(!$result){
-               //    die('Error selecting familyName from family: ' . mysqli_error($link));
-               // }
                echo "<pre>";
                echo var_dump();
                die();
