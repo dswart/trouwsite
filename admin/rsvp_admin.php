@@ -54,23 +54,18 @@
                   if(!$result){
                      die('Error selecting familyName from family: ' . mysqli_error($link));
                   }
+                  //Retrieve all familyNames and store them in an array
                   while ($row = mysqli_fetch_array($result))
                   {
-                    $familyMembers[] = $row['familyName'];
+                    $familyNames[] = $row['familyName'];
                   }
-                  foreach($familyMembers as $familyName){ ?>
+                  //Display all values from the array $familyNames the familyNames in option fields so we can choose them in the form.
+                  foreach($familyNames as $familyName){ ?>
                      <option value="<?php echo $familyName; ?>"><?php echo $familyName; ?></option>
                   <?php } ?>
                ?>
             </select>
-           <!-- <select class="form-control" id="family" name="family">
-              <option value="Dave Swart">Dave Swart</option>
-              <option value="Cor Swart">Cor Swart</option>
-              <option value="Michael Swart">Michael Swart</option>
-              <option value="Sandy Swart">Sandy Swart</option>
-              <option value="Jan Tolsma">Jan Tolsma</option>
-           </select> -->
-        </fieldset>
+         </fieldset>
         <button type="submit" class="btn btn-primary">Voeg toe!</button>
       </form>
    </div>
