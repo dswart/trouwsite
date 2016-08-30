@@ -52,9 +52,9 @@
                if(!mysqli_query($link, $query)){
                   die('Error inserting SQL: ' . mysqli_error($link));
                }
-               if(!$result){
-                  die('Error selecting familyName from family: ' . mysqli_error($link));
-               }
+               // if(!$result){
+               //    die('Error selecting familyName from family: ' . mysqli_error($link));
+               // }
                echo "<pre>";
                echo var_dump();
                die();
