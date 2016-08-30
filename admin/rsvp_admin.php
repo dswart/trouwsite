@@ -11,26 +11,7 @@
    <!-- <script src="bower_components/jquery/dist/jquery.min.js"></script> -->
 </head>
 <body>
-   <?php
-      require_once "config.php";
-      $query = "SELECT familyName FROM family";
-      if(!mysqli_select_db($link, $db_name)){
-         die('Error selecting database: ' . mysqli_error($link));
-      }
-      $result = mysqli_query($link, $query);
-      if(!$result){
-         die('Error selecting familyName from family: ' . mysqli_error($link));
-      }
-      while ($row = mysqli_fetch_array($result))
-      {
-        $familyMembers[] = $row['familyName'];
-      }
-      foreach($familyMembers as $familyName){
-         echo $familyName;
-         //This is just for you, git.
-      }
-   ?>
-   <!-- <div class="wrapper" style="width: 50%; margin-left: 25%;">
+   <div class="wrapper" style="width: 50%; margin-left: 25%;">
       <div class="btn-group" style="margin: 2rem 0">
          <button type="button" name="button" class="addButtonFamily btn btn-outline-primary">Familie toevoegen</button>
          <button type="button" name="button" class="addButtonPerson btn btn-outline-primary">Persoon toevoegen</button>
@@ -62,30 +43,36 @@
          </fieldset>
          <fieldset>
             <label for="family">Hoort bij deze familie</label>
-            <?php
-               // require_once "config.php";
-               // $query = "SELECT familyName FROM family";
-               // if(!mysqli_select_db($link, $db_name)){
-               //    die('Error selecting database: ' . mysqli_error($link));
-               // }
-               // $result = mysqli_query($link, $query);
-               // if(!$result){
-               //    die('Error selecting familyName from family: ' . mysqli_error($link));
-               // }
-               // echo "<pre>";
-               // echo var_dump();
-               // die();
-            ?>
-           <select class="form-control" id="family" name="family">
+            <select class="form-control" id="family" name="family">
+               <?php
+                  require_once "config.php";
+                  $query = "SELECT familyName FROM family";
+                  if(!mysqli_select_db($link, $db_name)){
+                     die('Error selecting database: ' . mysqli_error($link));
+                  }
+                  $result = mysqli_query($link, $query);
+                  if(!$result){
+                     die('Error selecting familyName from family: ' . mysqli_error($link));
+                  }
+                  while ($row = mysqli_fetch_array($result))
+                  {
+                    $familyMembers[] = $row['familyName'];
+                  }
+                  foreach($familyMembers as $familyName){ ?>
+                     <option value="<?php echo $familyName; ?>"><?php echo $familyName; ?></option>
+                  <?php } ?>
+               ?>
+            </select>
+           <!-- <select class="form-control" id="family" name="family">
               <option value="Dave Swart">Dave Swart</option>
               <option value="Cor Swart">Cor Swart</option>
               <option value="Michael Swart">Michael Swart</option>
               <option value="Sandy Swart">Sandy Swart</option>
               <option value="Jan Tolsma">Jan Tolsma</option>
-           </select>
+           </select> -->
         </fieldset>
         <button type="submit" class="btn btn-primary">Voeg toe!</button>
       </form>
-   </div> -->
+   </div>
 </body>
 </html>
