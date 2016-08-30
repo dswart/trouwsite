@@ -21,8 +21,7 @@
       if(!$result){
          die('Error selecting familyName from family: ' . mysqli_error($link));
       }
-      echo "<pre>";
-      var_dump();
+      echo $result;
       die();
    ?>
    <!-- <div class="wrapper" style="width: 50%; margin-left: 25%;">
