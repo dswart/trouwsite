@@ -15,6 +15,18 @@
       <div class="btn-group" style="margin: 2rem 0">
          <button type="button" name="button" class="addButtonFamily btn btn-outline-primary">Familie toevoegen</button>
          <button type="button" name="button" class="addButtonPerson btn btn-outline-primary">Persoon toevoegen</button>
+         <script type="text/javascript">
+            $(document).ready(function(){
+               $(".addButtonPerson").click(function(){
+                  $(".addFamily").hide();
+                  $(".addPerson").show();
+               })
+               $(".addButtonFamily").click(function(){
+                  $(".addPerson").hide();
+                  $(".addFamily").show();
+               })
+            });
+         </script>
       </div>
       <form class="addFamily" action="addFamily.php" method="POST" style="margin: 2rem 0">
          <fieldset class="form-group">
@@ -58,17 +70,5 @@
         <button type="submit" class="btn btn-primary">Voeg toe!</button>
       </form>
    </div>
-   <script type="text/javascript">
-      $(document).ready(function(){
-         $(".addButtonPerson").click(function(){
-            $(".addFamily").hide();
-            $(".addPerson").show();
-         })
-         $(".addButtonFamily").click(function(){
-            $(".addPerson").hide();
-            $(".addFamily").show();
-         })
-      });
-   </script>
 </body>
 </html>
