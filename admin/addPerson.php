@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="10;URL=http://www.daveenmies.nl/admin/rsvp_admin.php">
+    <!-- <meta http-equiv="refresh" content="10;URL=http://daveenmies.nl/admin/rsvp_admin.php"> -->
 </head>
 <body>
 
@@ -11,7 +11,7 @@ $personName = mysqli_real_escape_string($link, $_POST['personName']);
 $personDateAllowed = mysqli_real_escape_string($link, $_POST['personDateAllowed']);
 $family = mysqli_real_escape_string($link, $_POST['family']);
 echo $personName;
-echo $personDateAllowed
+echo $personDateAllowed;
 echo $family;
 
 $sql = "

@@ -1,7 +1,7 @@
 <html>
 <head>
     <title>Redirecting...</title>
-    <meta http-equiv="refresh" content="10;URL=http://www.daveenmies.nl/admin/rsvp_admin.php">
+    <!-- <meta http-equiv="refresh" content="10;URL=http://daveenmies.nl/admin/rsvp_admin.php"> -->
 </head>
 <body>
 
