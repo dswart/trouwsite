@@ -41,8 +41,12 @@
             <label for="familyName">Naam</label>
             <input type="text" class="form-control" id="personName" name="personName" placeholder="Naam">
          </fieldset>
+         <fieldset class="form-group">
+            <label for="personDateAllowed">Deze gast mag een date meenemen:</label>
+            <input type="checkbox" name="personDateAllowed">
+         </fieldset>
          <fieldset>
-            <label for="family">Hoort bij deze familie</label>
+            <label for="family">Hoort bij deze familie:</label>
             <select class="form-control" id="family" name="family">
                <?php
                   require_once "config.php";
