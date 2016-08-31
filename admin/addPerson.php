@@ -25,7 +25,7 @@ $sql = "
    (
       '".$personName."',
       '".$personDateAllowed."',
-      '".$family"'
+      '".$family."'
    )
 ";
 
