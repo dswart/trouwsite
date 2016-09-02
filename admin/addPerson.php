@@ -14,20 +14,38 @@ echo $personName;
 echo $personDateAllowed;
 echo $family;
 
-$sql = "
-   INSERT INTO person
-   (
-      personName,
-      personDateAllowed,
-      family
-   )
-   VALUES
-   (
-      '".$personName."',
-      '".$personDateAllowed."',
-      '".$family."'
-   )
-";
+if(!$personDateAllowed){
+   $sql = "
+      INSERT INTO person
+      (
+         personName,
+         personDateAllowed,
+         family
+      )
+      VALUES
+      (
+         '".$personName."',
+         'off',
+         '".$family."'
+      )
+   ";
+}
+else{
+   $sql = "
+      INSERT INTO person
+      (
+         personName,
+         personDateAllowed,
+         family
+      )
+      VALUES
+      (
+         '".$personName."',
+         '".$personDateAllowed."',
+         '".$family."'
+      )
+   ";
+}
 
 if(!mysqli_select_db($link, $db_name)){
    die('Error selecting databse: ' . mysqli_error($link));
