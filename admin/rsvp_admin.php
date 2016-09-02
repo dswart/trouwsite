@@ -43,7 +43,7 @@
          </fieldset>
          <fieldset class="form-group">
             <label for="personDateAllowed">Deze gast mag een date meenemen:</label>
-            <input type="checkbox" name="personDateAllowed">
+            <input type="checkbox" name="personDateAllowed" value="off">
          </fieldset>
          <fieldset>
             <label for="family">Hoort bij deze familie:</label>

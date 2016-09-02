@@ -35,9 +35,6 @@ if(!mysqli_query($link, $sql)){
 else{
    echo 'Great success!';
 }
-
-$url='the/url/you/want/to/go';
-echo '<META HTTP-EQUIV=REFRESH CONTENT="1; '.$url.'">';
 ?>
 </body>
 </html>
