@@ -9,43 +9,28 @@
 require_once "config.php";
 $personName = mysqli_real_escape_string($link, $_POST['personName']);
 $personDateAllowed = mysqli_real_escape_string($link, $_POST['personDateAllowed']);
+if(!$personDateAllowed){
+   $personDateAllowed = "off";
+}
 $family = mysqli_real_escape_string($link, $_POST['family']);
 echo $personName;
 echo $personDateAllowed;
 echo $family;
 
-if(!$personDateAllowed){
-   $sql = "
-      INSERT INTO person
-      (
-         personName,
-         personDateAllowed,
-         family
-      )
-      VALUES
-      (
-         '".$personName."',
-         'off',
-         '".$family."'
-      )
-   ";
-}
-else{
-   $sql = "
-      INSERT INTO person
-      (
-         personName,
-         personDateAllowed,
-         family
-      )
-      VALUES
-      (
-         '".$personName."',
-         '".$personDateAllowed."',
-         '".$family."'
-      )
-   ";
-}
+$sql = "
+   INSERT INTO person
+   (
+      personName,
+      personDateAllowed,
+      family
+   )
+   VALUES
+   (
+      '".$personName."',
+      '".$personDateAllowed."',
+      '".$family."'
+   )
+";
 
 if(!mysqli_select_db($link, $db_name)){
    die('Error selecting databse: ' . mysqli_error($link));

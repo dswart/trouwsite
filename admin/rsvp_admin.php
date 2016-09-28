@@ -29,6 +29,7 @@
          </script>
       </div>
       <form class="addFamily" action="addFamily.php" method="POST" style="margin: 2rem 0">
+         <h2>Familie toevoegen</h2>
          <fieldset class="form-group">
             <label for="familyName">Naam van de familie</label>
             <input type="text" class="form-control" id="familyName" name="familyName" placeholder="Naam van de familie">
@@ -37,6 +38,7 @@
       </form>
 
       <form class="addPerson" action="addPerson.php" method="POST" style="margin: 2rem 0; display: none;">
+         <h2>Persoon toevoegen</h2>
          <fieldset class="form-group">
             <label for="familyName">Naam</label>
             <input type="text" class="form-control" id="personName" name="personName" placeholder="Naam">
@@ -61,11 +63,12 @@
                   //Retrieve all familyNames and store them in an array
                   while ($row = mysqli_fetch_array($result))
                   {
-                    $familyNames[] = $row['familyName'];
+                  //   $familyNames[] = $row['familyName'];
+                    $familyIds[] = $row['family_id'];
                   }
                   //Display all values from the array $familyNames the familyNames in option fields so we can choose them in the form.
-                  foreach($familyNames as $familyName){ ?>
-                     <option value="<?php echo $familyName; ?>"><?php echo $familyName; ?></option>
+                  foreach($familyIds as $family_id){ ?>
+                     <option value="<?php echo $family_id; ?>"><?php echo $family_id; ?></option>
                   <?php } ?>
                ?>
             </select>
