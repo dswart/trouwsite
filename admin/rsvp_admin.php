@@ -63,12 +63,11 @@
                   //Retrieve all familyNames and store them in an array
                   while ($row = mysqli_fetch_array($result))
                   {
-                  //   $familyNames[] = $row['familyName'];
-                    $familyIds[] = $row['family_id'];
+                    $familyNames[] = $row['familyName'];
                   }
                   //Display all values from the array $familyNames the familyNames in option fields so we can choose them in the form.
-                  foreach($familyIds as $family_id){ ?>
-                     <option value="<?php echo $family_id; ?>"><?php echo $family_id; ?></option>
+                  foreach($familyNames as $familyName){ ?>
+                     <option value="<?php echo $familyName; ?>"><?php echo $familyName; ?></option>
                   <?php } ?>
                ?>
             </select>
